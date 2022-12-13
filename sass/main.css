@@ -64,4 +64,22 @@
 .social-media ul li a {
   text-decoration: none;
   color: #333;
+}
+
+.drop-down-data {
+  display: none;
+}
+.drop-down-data ul {
+  list-style: none;
+}
+.drop-down-data ul li {
+  padding: 16px 14px;
+}
+.drop-down-data ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.show {
+  display: block;
 }/*# sourceMappingURL=main.css.map */
