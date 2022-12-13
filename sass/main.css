@@ -1,0 +1,67 @@
+.main-nav,
+.secondary-nav {
+  background: #fefefe;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+.main-nav div,
+.secondary-nav div {
+  width: 33.3%;
+  text-align: center;
+}
+.main-nav .left-navigation ul,
+.main-nav .right-navigation ul,
+.main-nav .site-logo ul,
+.main-nav .drop-down ul,
+.main-nav .home ul,
+.secondary-nav .left-navigation ul,
+.secondary-nav .right-navigation ul,
+.secondary-nav .site-logo ul,
+.secondary-nav .drop-down ul,
+.secondary-nav .home ul {
+  list-style: none;
+}
+.main-nav .left-navigation ul li,
+.main-nav .right-navigation ul li,
+.main-nav .site-logo ul li,
+.main-nav .drop-down ul li,
+.main-nav .home ul li,
+.secondary-nav .left-navigation ul li,
+.secondary-nav .right-navigation ul li,
+.secondary-nav .site-logo ul li,
+.secondary-nav .drop-down ul li,
+.secondary-nav .home ul li {
+  display: inline-block;
+  padding: 16px 14px;
+}
+.main-nav .left-navigation ul li a,
+.main-nav .right-navigation ul li a,
+.main-nav .site-logo ul li a,
+.main-nav .drop-down ul li a,
+.main-nav .home ul li a,
+.secondary-nav .left-navigation ul li a,
+.secondary-nav .right-navigation ul li a,
+.secondary-nav .site-logo ul li a,
+.secondary-nav .drop-down ul li a,
+.secondary-nav .home ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.social-media {
+  position: absolute;
+  top: 35%;
+}
+.social-media ul {
+  list-style: none;
+}
+.social-media ul li {
+  padding: 16px 14px;
+}
+.social-media ul li a {
+  text-decoration: none;
+  color: #333;
+}/*# sourceMappingURL=main.css.map */
