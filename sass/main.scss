@@ -4,11 +4,12 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);;
-    width: 100%;
+    justify-content: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    // width: 100%;
 
     div{
-        width: 33.3%;
+        // width: 33.3%;
         text-align: center;
     }
     .left-navigation,
@@ -26,11 +27,17 @@
                 text-decoration: none;
                 color:#333;
             }
+            li:hover{
+                background: #fde60d;
+                a{
+                    color:#fff;
+                }
+            }
         }
     }
 }
 .social-media{
-    position: absolute;
+    position: fixed;
     top: 35%;
     ul{
         list-style: none;
@@ -39,12 +46,14 @@
         }
         li a{
             text-decoration: none;
-            color:#333;
+            color: #fde60d;;
         }
     }
 }
 .drop-down-data{
     display: none;
+    background: #6c757d;
+    text-align: center;
     ul{
         list-style: none;
         li{
@@ -52,10 +61,101 @@
         }
         li a{
             text-decoration: none;
-            color:#333;
+            color:#fefefe;
         }
     }
 }
 .show{
     display: block;
+}
+.home-page{
+    height: 80vh;
+    // width: 100%;
+}
+.products-page{
+    .title{
+        opacity: 0.8;
+    }
+    .details{
+        display: none;
+    }
+    .row{
+        .col{
+            a{
+                text-decoration: none;
+                color: #333;
+                cursor: pointer;
+            }
+            .card{
+                border: none;
+                opacity: 0.8;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+                .card-body{
+                    i{
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+        .card:hover{
+            background: #333;
+            color:#fff;
+        }
+    }
+    #soft,
+    #mob,
+    #web{
+        display: none;
+    }
+    #soft,
+    #mob,
+    #web{
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        .card{
+            border: none;
+        }
+    }
+}
+.services{
+    background: #fefefe;
+    .title{
+        opacity: 0.8;
+    }
+    .card{
+        border: none; 
+    }
+    .seo{
+        height: vh;
+    }
+}
+.contact{
+    background: #797d81;
+    .content{
+        .col{
+            .card{
+                border: none;
+                background: #797d81;
+                color:#fff;
+            }
+        }
+        i{
+            font-size: 72px;
+        }
+    }
+}
+.footer{
+    .content{
+        .site-logo{
+            background: #fde60d;
+        }
+        .social-icons{
+            list-style: none;
+            li{
+                display: inline-block;
+                a{
+                    color: #fde60d;
+                }
+            }
+        }
+    }
 }
