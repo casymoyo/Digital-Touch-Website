@@ -1,6 +1,7 @@
 html{
     overflow-x:hidden
 }
+
 .main-nav, 
 .secondary-nav{
     background: #fefefe;
@@ -9,8 +10,6 @@ html{
     align-items: center;
     justify-content: center;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    // F
-
     div{
         width: 33.3%;
         text-align: center;
@@ -21,6 +20,7 @@ html{
     .drop-down,
     .home{
         ul{
+            margin-top:2px ;
             list-style: none;
             li{
                 display: inline-block;
@@ -28,6 +28,8 @@ html{
             }
             li a{
                 text-decoration: none;
+                font-weight: 500;
+                text-transform: lowercase;
                 color:#333;
             }
             li:hover{
@@ -39,6 +41,7 @@ html{
         }
     }
 }
+
 .social-media{
     position: fixed;
     top: 35%;
@@ -60,7 +63,7 @@ html{
     ul{
         list-style: none;
         li{
-            padding: 16px 14px;
+            padding: 10px 10px;
         }
         li a{
             text-decoration: none;
@@ -74,6 +77,9 @@ html{
 .home-page{
     height: 80vh;
     // width: 100%;
+    .btn{
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    }
 }
 .products-page{
     .title{
@@ -170,7 +176,7 @@ html{
     align-items: center;
     overflow-x:hidden;
     gap: 0.4rem;
-    width: 100%;
+    width: 89%;
     padding: 1.3rem;
     /* min-height: 250px; */
     position: absolute;
