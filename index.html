@@ -23,7 +23,7 @@
 
 <body>
     <nav class="d-md-none d-none d-sm-none d-xs-none d-lg-flex main-nav">
-        <div class="left-navigation">
+        <div class="left-navigation ">
             <ul>
                 <li><a href="">Home</a></li>
                 <li><a href="#products">Products</a></li>
@@ -49,7 +49,7 @@
                 <li><a href=""><i class="bi bi-house text-dark"></i></a></li>
             </ul>
         </div>
-        <div class="site-logo">2</div>
+        <div class="site-logo"><img src="assets/logo-no.png" alt="" width="60px"></div>
         <div class="drop-down">
             <ul>
                 <li><button class="btn btn-light" type="button"><i class="bi bi-list text-dark"></i></button></li>
@@ -71,6 +71,7 @@
             <li><a href=""> <i class="bi bi-facebook"></i></a></li>
             <li><a href=""> <i class="bi bi-twitter"></i></a></li>
             <li><a href=""> <i class="bi bi-whatsapp"></i></a></li>
+            <li><a href=""> <i class="bi bi-github"></i></a></li>
         </ul>
     </div>
     <div class="container">
@@ -79,7 +80,7 @@
             <div class="content d-flex flex-column justify-content-center align-items-center">
                 <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non eius, nulla nesciunt et aliquam hic excepturi odio magni eveniet, qui ut explicabo tempora corporis. Error dolorum iusto vero ab obcaecati.
                 Similique, ea. Nihil nam voluptatum non eveniet, velit animi quis tempore sapiente laudantium, consequuntur, dolor exercitationem fugiat. Perspiciatis corporis quisquam distinctio doloremque ducimus autem eligendi quos vitae excepturi facere? Fuga?</p>
-                <button class="btn btn-secondary" type="button">Get to know more</button>
+                <button class="btn btn-secondary" type="button">Get To know Us</button>
             </div>
         </div>
     </section>
@@ -144,6 +145,7 @@
                             Deserunt officia placeat, harum perferendis optio inventore saepe beatae nihil voluptatibus quam recusandae rerum, nulla, quidem corrupti itaque corporis cupiditate? Eius nesciunt nobis quaerat suscipit repellat at recusandae ea dolorum!
                             Explicabo temporibus labore illum nostrum cumque ea minus, tempora iure quas veritatis. Possimus fugit reprehenderit ab illo non commodi modi ipsam deleniti esse, corrupti iste explicabo ad distinctio doloribus molestias.
                         </div>
+                        <a href="#mod" class="btn btn-secondary qoute" type="button" data-product="Software">Get A Qoute</a>
                         <a href="#products" class="btn btn-light"><i class="bi bi-arrow-up"></i>Product Menu</a>
                     </div>
                 </div>
@@ -171,6 +173,7 @@
                             Deserunt officia placeat, harum perferendis optio inventore saepe beatae nihil voluptatibus quam recusandae rerum, nulla, quidem corrupti itaque corporis cupiditate? Eius nesciunt nobis quaerat suscipit repellat at recusandae ea dolorum!
                             Explicabo temporibus labore illum nostrum cumque ea minus, tempora iure quas veritatis. Possimus fugit reprehenderit ab illo non commodi modi ipsam deleniti esse, corrupti iste explicabo ad distinctio doloribus molestias.
                         </div>
+                        <a href="#mod" class="btn btn-secondary qoute" type="button" data-product="Mobile application">Get A Qoute</a>
                         <a href="#products" class="btn btn-light"><i class="bi bi-arrow-up"></i>Product Menu</a>
                     </div>
                 </div>
@@ -198,6 +201,7 @@
                             Deserunt officia placeat, harum perferendis optio inventore saepe beatae nihil voluptatibus quam recusandae rerum, nulla, quidem corrupti itaque corporis cupiditate? Eius nesciunt nobis quaerat suscipit repellat at recusandae ea dolorum!
                             Explicabo temporibus labore illum nostrum cumque ea minus, tempora iure quas veritatis. Possimus fugit reprehenderit ab illo non commodi modi ipsam deleniti esse, corrupti iste explicabo ad distinctio doloribus molestias.
                         </div>
+                        <a href="#mod" class="btn btn-secondary qoute" type="button" data-product="Web Application or Site">Get A Qoute</a>
                         <a href="#products" class="btn btn-light"><i class="bi bi-arrow-up"></i>Product Menu</a>
                     </div>
                 </div>
@@ -264,8 +268,42 @@
         </div>
     </section>
 
-    <section class="portifolio" data-aos="fade-left"
-    >
+    <section class="mod text-light hidden" id="mod">
+        <div class="content px-5 py-5">
+            <div class="d-flex justify-content-between align-items-center">
+                <img src="../assets/logo.png" width="80px" alt="logo" />
+                <h4>Enter Some Qoute Details</h4>
+                <button class="btn btn-light btn-close">⨉</button>
+            </div>
+            <form method="post">
+                <div class="form-group">
+                    <label for="qoute-name">Name</label>
+                    <input type="text" name="name" id="qoute-name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="qoute-email">Email</label>
+                    <input type="text" name="email" id="qoute-email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="qoute-email">Phone</label>
+                    <input type="text" name="phone" id="qoute-phone" class="form-control">
+                </div>
+                <div class="form-group mt-2 mb-2">
+                    <label for="qoute-message">Defining your problem</label>
+                    <textarea name="message" class="form-control" id="qoute-message" cols="30" rows="5"></textarea>
+                </div>
+                <div class="form-group mt-2 mb-2">
+                    <label for="qoute-file">Upload file for your problem (optional)</label>
+                    <input type="file" name="file" id="qoute-file">
+                </div>
+                <button class="btn btn-secondary mt-2" type="submit">Submit</button>
+            </form>
+        </div>
+      </section>
+      
+      <div class="overlay hidden"></div>
+
+    <section class="portifolio" data-aos="fade-left">
         <div class="container">
             <div class="title h3 py-3">Our Portifolio</div>
             <div class="content">

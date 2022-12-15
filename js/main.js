@@ -1,5 +1,13 @@
 document.addEventListener(
     'DOMContentLoaded', function(){
+
+        window.onscroll = () => {
+            if(window.innerHeight + window.scrollY >= document.body.offsetHeight){
+                document.querySelector('.social-media').style.display = 'none'
+            }
+        }
+
+        // navbar drop down 
         let dropBtn =  document.querySelector('.bi-list')
         dropBtn.addEventListener(
             'click', function(){
@@ -13,34 +21,65 @@ document.addEventListener(
                 }
             }
         )
-    let cardParent = document.querySelector('.products-page')
-    cardParent.querySelectorAll('.card').forEach(card => {
-        card.onclick = function(){
-            let products = document.querySelector('.products-page')
-            products.querySelector('.content').style.display = 'none'
-            show(this.dataset.page)
-        }
-    })
+        
+        // product menu 
+        let cardParent = document.querySelector('.products-page')
+        cardParent.querySelectorAll('.card').forEach(card => {
+            card.onclick = function(){
+                let products = document.querySelector('.products-page')
+                products.querySelector('.content').style.display = 'none'
+                show(this.dataset.page)
+            }
+        })
+        function show(cardId) {
+            document.querySelector('#soft').style.display = 'none'
+            document.querySelector('#mob').style.display = 'none'
+            document.querySelector('#web').style.display = 'none'
 
-    // footer date
-    const d = document.getElementById('date')
-    let ft = new Date()
-    d.innerHTML = ft.getFullYear();
+            try {
+                document.querySelector(`#${cardId}`).style.display = 'block'
+            } catch (error) {
+                // return no error weird
+            }
+        }
+
+        // modal variables
+        const mod = document.querySelector(".mod")
+        const overlay = document.querySelector(".overlay")
+        // modal functionality
+        document.querySelectorAll('.qoute').forEach( button => {
+            button.addEventListener(
+                'click', function(){
+                    console.log(this.dataset.product)
+                    showModal(this.dataset.product)
+                }
+            )
+        })
+        // modal show
+        function showModal(product){
+            mod.classList.remove("hidden")
+            overlay.classList.remove("hidden")
+
+            mod.querySelector('#qoute-message').innerHTML = `What kind of ${product} can we develop for you?`
+        }
+        // modal close
+        document.querySelector('.btn-close').addEventListener(
+            'click', () =>{
+                mod.classList.add("hidden")
+                overlay.classList.add("hidden")
+            }
+        )
+        mod.querySelector('#qoute-message').addEventListener(
+            'click', () =>{
+                mod.querySelector('#qoute-message').innerHTML = ''
+            }
+        )
+
+        // footer date
+        const d = document.getElementById('date')
+        let ft = new Date()
+        d.innerHTML = ft.getFullYear();
     }
 )
 
-function show(cardId) {
-    let products = document.querySelector('.products-page')
-    document.querySelector('#soft').style.display = 'none'
-    document.querySelector('#mob').style.display = 'none'
-    document.querySelector('#web').style.display = 'none'
-    
-    products.querySelector('.content').style.display = 'none'
-    try {
-        document.querySelector(`#${cardId}`).style.display = 'block'
-    } catch (error) {
-        // not to return error
-    }
-    
-    
-}
+
